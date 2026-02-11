@@ -1,6 +1,4 @@
 streamlit
-pandas
 requests
-plotly
 python-dotenv
-Flask
+pandas
