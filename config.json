@@ -1,0 +1,34 @@
+{
+    "jira_url": "https://jira.intellectdesign.com",
+    "jql": "project = CBXGEN AND issuetype = Bug AND fixVersion = 'CBX 25.1.1' AND Environments in (DIT, DIT, DIT, DIT, DIT, DIT, DIT, DIT, DIT, DIT, DIT, DIT, DIT, DIT) AND Product in ('eMACH.ai CBX', 'eMACH.ai CBX', 'eMACH.ai CBX', 'eMACH.ai CBX', 'eMACH.ai CBX', 'eMACH.ai CBX', 'eMACH.ai CBX', 'eMACH.ai CBX', 'eMACH.ai CBX', 'eMACH.ai CBX', 'eMACH.ai CBX') AND 'Product Pillar' = 'CBX FO' ORDER BY due DESC, key DESC, reporter ASC",
+    "dashboard_meta": {
+        "title": "Defect Analysis Dashboard",
+        "project": "Composition | CBX FO",
+        "manager": "Kaizad Mehta",
+        "lead": "Suganya Karunanidhi"
+    },
+    "field_mapping": {
+        "Severity": "Severity",
+        "Product / Module": "Product / Module",
+        "Submodule": "Submodule",
+        "Issue Category": "Issue Category",
+        "Environments": "Environments",
+        "Product Pillar": "Product Pillar",
+        "Resolution notes": "Resolution notes",
+		"Benzene": "Benzene"
+    },
+    "pivots": [
+        {"x": "Product / Module", "stack": "Severity"},
+        {"x": "Product / Module", "stack": "Submodule"},
+        {"x": "Product / Module", "stack": "Status"},
+        {"x": "Product / Module", "stack": "Issue Category", "enabled": false},
+		{"x": "Status", "stack": "Severity"},
+		{"x": "Assignee", "stack": "Status"},
+		{"x": "Labels", "stack": "Severity", "enabled": false},
+		{"x": "Labels", "stack": "Status"},
+		{"x": "Labels", "stack": "Issue Category", "enabled": false},
+		{"x": "Benzene", "stack": "Severity", "enabled": false},
+		{"x": "Benzene", "stack": "Status"},
+		{"x": "Benzene", "stack": "Issue Category", "enabled": false}
+    ]
+}
